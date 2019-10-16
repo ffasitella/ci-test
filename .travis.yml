@@ -1,6 +1,6 @@
 language: csharp
 solution: "ci-test.sln"
-dotnet: 3.0
+dotnet: 2.1.502
 mono: none
 sudo: true
 env:
