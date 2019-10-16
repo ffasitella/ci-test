@@ -4,6 +4,6 @@ namespace TravisCI
 {
     public class GuidGenerator
     {
-        public Guid GetNewGuid() => Guid.NewGuid(); 
+        public Guid GetNewGuid() => Guid.NewGuid();
     }
 }
