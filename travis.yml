@@ -1,0 +1,6 @@
+language: csharp
+dotnet: 2.2
+sudo: false
+script:
+    - dotnet build ci-test.sln -c Release
+    - dotnet test -c Release --no-build
