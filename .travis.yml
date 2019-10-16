@@ -1,6 +1,10 @@
 language: csharp
 solution: "ci-test.sln"
-dotnet: 2.1.502
+addons:
+  snaps:
+  - name: dotnet-sdk
+    classic: true
+    channel: latest/beta
 mono: none
 sudo: true
 env:
@@ -9,5 +13,6 @@ env:
 install:
     - dotnet restore
 script:
+    - sudo snap alias dotnet-sdk.dotnet dotnet
     - dotnet build ci-test.sln -c Release
     - dotnet test -c Release --no-build
