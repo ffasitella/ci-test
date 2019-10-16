@@ -13,6 +13,6 @@ env:
 install:
     - dotnet restore
 script:
-    - sudo snap alias dotnet-sdk.dotnet dotnet
+    - snap alias dotnet-sdk.dotnet dotnet
     - dotnet build ci-test.sln -c Release
     - dotnet test -c Release --no-build
