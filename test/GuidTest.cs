@@ -9,9 +9,7 @@ namespace TravisCI
         public void GetNewGuidTest()
         {
             var guidGenerator = new GuidGenerator();
-            var guid1 = guidGenerator.GetNewGuid();
-            var guid2 = guidGenerator.GetNewGuid();
-            Assert.NotEqual(guid1, guid2);
+            Assert.NotEqual(guidGenerator.GetNewGuid(), guidGenerator.GetNewGuid());
         }
     }
 }
