@@ -10,9 +10,8 @@ sudo: true
 env:
     global:
         - DOTNET_CLI_TELEMETRY_OPTOUT: 1
-install:
-    - dotnet restore
 script:
     - snap alias dotnet-sdk.dotnet dotnet
+    - dotnet restore
     - dotnet build ci-test.sln -c Release
     - dotnet test -c Release --no-build
